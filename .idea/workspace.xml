@@ -1,19 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bc643a57-42e3-45f4-a77e-2ab6b808bb11" name="Default Changelist" comment="" />
+    <list default="true" id="bc643a57-42e3-45f4-a77e-2ab6b808bb11" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/static_files/assets/img/batman.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_files/assets/img/cinema.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_files/assets/img/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_files/assets/img/portfolio/fullsize/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_files/assets/img/portfolio/fullsize/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_files/assets/img/portfolio/fullsize/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_files/assets/img/portfolio/fullsize/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_files/assets/img/portfolio/fullsize/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_files/assets/img/portfolio/fullsize/6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_files/assets/img/portfolio/thumbnails/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_files/assets/img/portfolio/thumbnails/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_files/assets/img/portfolio/thumbnails/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_files/assets/img/portfolio/thumbnails/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_files/assets/img/portfolio/thumbnails/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_files/assets/img/portfolio/thumbnails/6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_files/css/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_files/js/scripts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/search.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/watchlist/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/watchlist/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/watchlist/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/watchlist/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/watchlist/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yomdb/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/yomdb/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yomdb/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/yomdb/urls.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1ccD7r8wp8Zp2XD7kF0ym9qxuUX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/manage.py" />
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static_files" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\alenu\Desktop\Workspace\dev\yomdb\static_files" />
+      <recent name="C:\Users\alenu\Desktop\Workspace\dev\yomdb\templates" />
+      <recent name="C:\Users\alenu\Desktop\Workspace\dev\yomdb" />
+      <recent name="C:\Users\alenu\Desktop\Workspace\dev\yomdb\watchlist\templates" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\alenu\Desktop\Workspace\dev\yomdb\static_files" />
       <recent name="C:\Users\alenu\Desktop\Workspace\dev\yomdb" />
     </key>
   </component>
@@ -85,5 +126,19 @@
       <updated>1590818823165</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
