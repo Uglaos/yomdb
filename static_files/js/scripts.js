@@ -75,8 +75,8 @@ $(document).ready(() => {
 function getMovies(searchText){
   axios.get('http://www.omdbapi.com/?s='+searchText+'&apikey=6f665eb1')
     .then((response) => {
-      console.log(response);
       let movies = response.data.Search;
+      console.log(movies)
       let output = '';
       $.each(movies, (index, movie) => {
         output += `
@@ -84,7 +84,7 @@ function getMovies(searchText){
             <div class="well text-center">
               <img src="${movie.Poster}" height="150px" width="auto">
               <p class="movie-name">${movie.Title}</p>
-              <a onclick="movieSelected('${movie.imdbID}')" class="btn btn-primary" href="#">Add to watchlist</a>
+              <button onclick="movieSelected('${movie.imdbID}')" class="btn btn-primary" href="#">Add to watchlist</button>
             </div>
           </div>
         `;
@@ -95,4 +95,16 @@ function getMovies(searchText){
     .catch((err) => {
       console.log(err);
     });
+}
+
+function movieSelected(id){
+    axios.defaults.xsrfHeaderName = "X-CSRFTOKEN"
+    axios.defaults.xsrfCookieName = "csrftoken"
+    axios.post('add/', {'imdbID': id})
+    .then(function (response) {
+    console.log(response);
+  })
+  .catch(function (error) {
+    console.log(error);
+  })
 }
