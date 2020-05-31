@@ -8,16 +8,30 @@
 
     <div class="container">
         <div class="row align-items-center justify-content-center text-center">
-            <div class="mt-5 mb-5">
-                {% for movie in object_list %}
-                <div id="watchlist" class="row mt-2">
-                    <a class="btn btn-secondary btn-xl js-scroll-trigger" href="#about">{{ movie.title }}</a>
-                </div>
-                {% empty %}
-                <div class="row">
-                    <h5 class="movie-name">There are no movies, please add some to the database...</h5>
-                </div>
-                {% endfor %}
+            <div class="table-responsive text-nowrap mt-5 mb-5">
+                <h3 class="text-uppercase text-white font-weight-bold">Movies</h3>
+                <table class="table mt-5">
+                    <thead>
+                    <tr>
+                        <th scope="col" class="movie-name">#</th>
+                        <th scope="col" class="movie-name">Title</th>
+                        <th scope="col" class="movie-name">Watched</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for movie in object_list %}
+                    <tr>
+                        <th scope="row" class="movie-name">{{ forloop.counter }}</th>
+                        <td class="movie-name">{{ movie.title }}</td>
+                        <td class="movie-name">x</td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td colspan="3" class="movie-name">There are no movies, please add some to the database...</td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
