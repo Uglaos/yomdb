@@ -102,7 +102,7 @@ function movieSelected(id){
     axios.defaults.xsrfCookieName = "csrftoken"
     axios.post('add/', {'imdbID': id})
     .then(function (response) {
-    console.log(response);
+    window.location.href = 'http://127.0.0.1:8000/watchlist/';
   })
   .catch(function (error) {
     console.log(error);

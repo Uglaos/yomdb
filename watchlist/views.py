@@ -1,9 +1,9 @@
 from django.shortcuts import render
-from django.views.generic import View, ListView
-from django.shortcuts import redirect
+from django.views.generic import View, ListView, DetailView, DeleteView
+from django.urls import reverse_lazy
+from django.shortcuts import redirect, get_object_or_404
 from django.contrib import messages
-from .models import Watchlist, Movie
-from .forms import WatchlistForm
+from .models import Movie, Actor, Genre
 import json
 import requests
 
@@ -18,30 +18,15 @@ class SearchView(View):
         return render(self.request, "search.html")
 
 
-class MovieView(ListView):
+class WatchlistView(ListView):
     model = Movie
     paginate_by = 10
-    template_name = "movies.html"
+    template_name = "watchlist.html"
 
 
-class WatchlistView(View):
-    def get(self, *args, **kwargs):
-        form = WatchlistForm()
-        watchlists = Watchlist.objects.all()
-        context = {
-            'form': form,
-            'watchlists': watchlists,
-        }
-        return render(self.request, "watchlist.html", context=context)
-
-    def post(self, *args, **kwargs):
-        form = WatchlistForm(self.request.POST or None)
-        if form.is_valid():
-            name = form.cleaned_data.get('name')
-            watchlist = Watchlist.objects.create(name=name)
-            message = "New watchlist %s was added to your watchlists" % name
-            messages.success(self.request, message)
-            return redirect("watchlist:watchlist")
+class MovieDetailView(DetailView):
+    model = Movie
+    template_name = "movie.html"
 
 
 def add_movie(request):
@@ -54,10 +39,34 @@ def add_movie(request):
         url = f'http://www.omdbapi.com/?i={imdbID}&apikey={api_key}'
         response = requests.get(url)
         vals = json.loads(response.text)
-        Movie.objects.create(
+
+        movie = Movie.objects.create(
             imdbID=vals.get('imdbID'),
             title=vals.get('Title'),
-            # genre='Genre',
-            # actors='Actors'
         )
+        actors = vals.get('Actors').split(',')
+        for name in actors:
+            actor, created = Actor.objects.get_or_create(name=name)
+            movie.actors.add(actor)
+
+        genres = vals.get('Genre').split(',')
+        for name in genres:
+            genre, created = Genre.objects.get_or_create(name=name)
+            movie.genres.add(genre)
+
         return redirect("watchlist:watchlist")
+
+
+class MovieDelete(DeleteView):
+    model = Movie
+    success_url = reverse_lazy('watchlist:watchlist')
+
+
+def delete_from_watchlist(request, pk):
+    movie = get_object_or_404(Movie, id=pk)
+    if movie:
+        movie.delete()
+        messages.info(request, "This movie was deleted")
+        return redirect("watchlist:movie")
+    else:
+        return redirect("watchlist:movie")
