@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import HomeView, SearchView, add_movie, WatchlistView, MovieDetailView, delete_from_watchlist, MovieDelete
+from .views import HomeView, SearchView, add_movie, WatchlistView, MovieDetailView, MovieDelete, set_watched
 
 app_name = 'watchlist'
 
@@ -10,4 +10,5 @@ urlpatterns = [
     path('watchlist/', WatchlistView.as_view(), name='watchlist'),
     path('movie/<int:pk>/', MovieDetailView.as_view(), name='movie'),
     path('delete/<int:pk>/', MovieDelete.as_view(), name='delete'),
+    path('watched/<int:pk>/', set_watched, name='set_watched'),
 ]

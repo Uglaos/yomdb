@@ -23,7 +23,6 @@ class Movie(models.Model):
     date_added = models.DateTimeField(auto_now_add=True)
     actors = models.ManyToManyField(Actor)
     genres = models.ManyToManyField(Genre)
-    slug = models.SlugField()
 
     def __str__(self):
         return self.title

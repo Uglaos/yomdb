@@ -62,11 +62,8 @@ class MovieDelete(DeleteView):
     success_url = reverse_lazy('watchlist:watchlist')
 
 
-def delete_from_watchlist(request, pk):
+def set_watched(request, pk):
     movie = get_object_or_404(Movie, id=pk)
-    if movie:
-        movie.delete()
-        messages.info(request, "This movie was deleted")
-        return redirect("watchlist:movie")
-    else:
-        return redirect("watchlist:movie")
+    movie.watched = False if movie.watched else True
+    movie.save()
+    return redirect("watchlist:watchlist")

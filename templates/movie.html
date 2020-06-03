@@ -11,7 +11,7 @@
             <div class="table-responsive text-nowrap mt-5 mb-5">
                 <h3 class="text-uppercase text-white font-weight-bold mt-5 mb-2">{{ object.title }}</h3>
                 {% for genre in object.genres.all %}
-                <p class="btn btn-primary">{{ genre.name }} </p>
+                <p class="btn btn-primary btn-sm">{{ genre.name }} </p>
                 {% endfor %}
                 <hr>
                 <h4 class="text-white font-weight-bold mb-4">Actors</h4>
