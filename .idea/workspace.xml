@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bc643a57-42e3-45f4-a77e-2ab6b808bb11" name="Default Changelist" comment="">
+    <list default="true" id="bc643a57-42e3-45f4-a77e-2ab6b808bb11" name="Default Changelist" comment="[ADD] Search">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/watchlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/watchlist.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/watchlist/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/watchlist/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/watchlist/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/watchlist/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/watchlist/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/watchlist/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -146,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591201451062</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="[ADD] Search">
+      <created>1591291645310</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1591291645310</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -170,6 +174,7 @@
     <MESSAGE value="[ADD] Movies table" />
     <MESSAGE value="[ADD] Actors, Genres, Movie Detailview, DeleteView" />
     <MESSAGE value="[ADD] Set watched" />
-    <option name="LAST_COMMIT_MESSAGE" value="[ADD] Set watched" />
+    <MESSAGE value="[ADD] Search" />
+    <option name="LAST_COMMIT_MESSAGE" value="[ADD] Search" />
   </component>
 </project>

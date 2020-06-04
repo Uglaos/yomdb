@@ -12,7 +12,7 @@
                 <h3 class="text-uppercase text-white font-weight-bold">Watchlist</h3>
                 <form method="GET" action=".">
                     <div class="form-row pt-3">
-                        <div class="form-group col-10">
+                        <div class="form-group col-12">
                             <div class="input-group">
                                 <input class="form-control py-2 border-right-0 border" type="search"
                                        name="title_or_actor" placeholder="Title or actor..."/>
@@ -45,7 +45,7 @@
                     <tr>
                         <th scope="col" class="movie-name">#</th>
                         <th scope="col" class="movie-name">Title</th>
-                        <th scope="col" class="movie-name">Added</th>
+                        <th scope="col" class="movie-name">Date Added</th>
                         <th scope="col" class="movie-name">Watched</th>
                         <th scope="col" class="movie-name">Remove</th>
                     </tr>
@@ -53,9 +53,9 @@
                     <tbody>
                     {% for movie in movies %}
                     <tr>
-                        <th scope="row" class="movie-name">{{ forloop.counter }}</th>
-                        <td class="text-white font-weight-bold"><a href="/movie/{{ movie.id }}/">{{ movie.title }}
-                        </a></td>
+                        <td scope="row" class="movie-name">{{ forloop.counter }}</td>
+                        <td class="text-white font-weight-bold"><a href="/movie/{{ movie.id }}/">{{ movie.title }}</a></td>
+                        <td scope="row" class="movie-name">{{ movie.date_added }}</td>
                         <td class="movie-name">
                             {% if movie.watched %}
                             <a href="{% url 'watchlist:set_watched' movie.id %}">
