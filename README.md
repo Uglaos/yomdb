@@ -11,7 +11,7 @@ Gives you and your colleagues, friends a new experience in watching and sharing 
 
 ![yomdb_2](https://user-images.githubusercontent.com/42736734/83799766-956dbb80-a6a6-11ea-80e5-f09ceb7176ef.png)
 
-## Your watchlist with search and filter by Genre, Actors, Watched
+## Watchlist - with search and filter by genre, actors and Watched
 
 ![yomdb_3](https://user-images.githubusercontent.com/42736734/83799775-9999d900-a6a6-11ea-8d86-5b0151aacaa0.png)
 
