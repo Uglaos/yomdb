@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc643a57-42e3-45f4-a77e-2ab6b808bb11" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/watchlist/migrations/0007_remove_movie_slug.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_files/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/static_files/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/movie.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/movie.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/watchlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/watchlist.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/watchlist/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/watchlist/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/watchlist/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/watchlist/urls.py" afterDir="false" />
@@ -142,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591119731260</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="[ADD] Set watched">
+      <created>1591201451062</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1591201451062</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -165,6 +169,7 @@
     <MESSAGE value="[ADD] Movies view" />
     <MESSAGE value="[ADD] Movies table" />
     <MESSAGE value="[ADD] Actors, Genres, Movie Detailview, DeleteView" />
-    <option name="LAST_COMMIT_MESSAGE" value="[ADD] Actors, Genres, Movie Detailview, DeleteView" />
+    <MESSAGE value="[ADD] Set watched" />
+    <option name="LAST_COMMIT_MESSAGE" value="[ADD] Set watched" />
   </component>
 </project>

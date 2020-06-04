@@ -1,8 +1,8 @@
+from django.db.models import Q
 from django.shortcuts import render
-from django.views.generic import View, ListView, DetailView, DeleteView
+from django.views.generic import View, DetailView, DeleteView
 from django.urls import reverse_lazy
 from django.shortcuts import redirect, get_object_or_404
-from django.contrib import messages
 from .models import Movie, Actor, Genre
 import json
 import requests
@@ -18,10 +18,36 @@ class SearchView(View):
         return render(self.request, "search.html")
 
 
-class WatchlistView(ListView):
-    model = Movie
-    paginate_by = 10
-    template_name = "watchlist.html"
+def is_valid_param(param):
+    return param != '' and param is not None
+
+
+def filter(request):
+    qs = Movie.objects.all()
+    title_or_actor_query = request.GET.get('title_or_actor')
+    genre = request.GET.get('genre')
+    watched = request.GET.get('watched')
+    not_watched = request.GET.get('not_watched')
+
+    if is_valid_param(title_or_actor_query):
+        qs = qs.filter(Q(title__icontains=title_or_actor_query) | Q(actors__name__icontains=title_or_actor_query)).distinct()
+    if is_valid_param(genre) and genre != 'Choose...':
+        qs = qs.filter(genres__name=genre)
+    if watched == 'on':
+        qs = qs.filter(watched=True)
+    elif not_watched == 'on':
+        qs = qs.filter(watched=False)
+
+    return qs
+
+
+def watchlist(request):
+    qs = filter(request)
+    context = {
+        'movies': qs,
+        'genres': Genre.objects.all()
+    }
+    return render(request, "watchlist.html", context)
 
 
 class MovieDetailView(DetailView):
@@ -59,7 +85,7 @@ def add_movie(request):
 
 class MovieDelete(DeleteView):
     model = Movie
-    success_url = reverse_lazy('watchlist:watchlist')
+    success_url = reverse_lazy("watchlist:watchlist")
 
 
 def set_watched(request, pk):
